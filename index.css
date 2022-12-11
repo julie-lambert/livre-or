@@ -1,0 +1,14 @@
+body{
+    background: linear-gradient(45deg, #9af160, #3F5EFB);
+    height: 100vh;
+    flex-direction: column;
+  
+  }
+  
+  h1{
+    display: flex;
+    font-size: 80px;
+    padding-top: 10%;
+    padding-left: 35%;
+    color:white;
+}

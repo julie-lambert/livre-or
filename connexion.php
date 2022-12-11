@@ -1,13 +1,8 @@
 <?php
 
 include 'header.php';
+include 'connect.php';
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "livreor";
-
-$conn = new mysqli($servername, $username, $password, $dbname); // connexion à la base de donnée
 
 $sql = "SELECT * FROM `utilisateurs`";
 $query = $conn -> query($sql);
@@ -19,13 +14,20 @@ $users = $query -> fetch_all();
         $login= htmlspecialchars($_POST["username"]);
         $mdp = htmlspecialchars($_POST["password"]);
         
+        $user = ("SELECT * FROM utilisateurs WHERE login = '$login'");
+        $user = mysqli_query($conn, $user);
+        $session_users = mysqli_fetch_array($user, MYSQLI_ASSOC);
+
+        var_dump($session_users);
         for($i=0; isset($users[$i]); $i++){
             
             
             if($users[$i][1] === $login){
                 //echo "Login ok<br>";
                 if($users[$i][2] === $mdp){
+                    $_SESSION['id'] = $session_users['id'];
                     $_SESSION['login'] = $login;
+                    $_SESSION['password'] = $mdp;
                     //echo"Connexion réussie<br>";
 
                         header('location: index.php');
@@ -62,6 +64,8 @@ $users = $query -> fetch_all();
     </head>
    
     <body>
+
+    <div class="container">
         <div class="form1">
             <form action="" method="POST">
                 <p>Connexion</p>
@@ -72,5 +76,11 @@ $users = $query -> fetch_all();
             <input type="submit" id='submit' value='Se connecter' >
             </form>
         </div> 
+        <div class="drop drop-1"></div> 
+        <div class="drop drop-2"></div> 
+        <div class="drop drop-3"></div> 
+        <div class="drop drop-4"></div> 
+        <div class="drop drop-5"></div> 
+    </div>
     </body>
 </html>

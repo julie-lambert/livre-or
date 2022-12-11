@@ -1,13 +1,7 @@
 <?php
 
 include 'header.php';
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "livreor";
-
-$conn = new mysqli($servername, $username, $password, $dbname); // connexion à la base de donnée
+include 'connect.php';
 
 // récuperer les données de la bdd 
 $sql = "SELECT * FROM `utilisateurs`";
@@ -60,8 +54,11 @@ if(isset($_POST["Envoyer"])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
     <link rel="stylesheet" href="inscription.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
+    <div class="container">
         <div class="form1">
             <form  method = "post" action="inscription.php">
                 <p>Bienvenue</p>
@@ -74,5 +71,11 @@ if(isset($_POST["Envoyer"])){
                 <input type="submit" name="Envoyer" value="Envoyer">
             </form>
         </div> 
+        <div class="drop drop-1"></div> 
+        <div class="drop drop-2"></div> 
+        <div class="drop drop-3"></div> 
+        <div class="drop drop-4"></div> 
+        <div class="drop drop-5"></div> 
+    </div>    
 </body>
 </html>

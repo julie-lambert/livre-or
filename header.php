@@ -18,8 +18,9 @@
                                 <ul class="l1">
                                         <li><b><a href="index.php" class="button">Accueil</a></b></li>
                                         <li><b><a href="profil.php" class="button">Profil</a></b></li>
-                                        <li><b><a href="deconnexion" class="button">Déconnexion</a></b></li>
-                                        
+                                        <li><b><a href="commentaire.php" class="button">Commentaires</a></b></li>
+                                        <li><b><a href="livreor.php" class="button">Livre d\'Or</a></b></li>
+                                        <li><b><a href="deconnexion.php" class="button">Déconnexion</a></b></li>
                                 </ul>
                             </nav>
                         </header> '; 
@@ -29,6 +30,7 @@
                     <ul class="l1">
                             <li><b><a href="connexion.php" class="button">Connexion</a></b></li>
                             <li><b><a href="inscription.php" class="button">Inscription</a></b></li>
+                            <li><b><a href="livreor.php" class="button">Livre d\'Or</a></b></li>
                     </ul>
                 </nav>
             </header>';
