@@ -26,7 +26,7 @@ $users1 = $query1 -> fetch_all();
 if(isset($_POST["Envoyer"])){
     if(!empty($_POST["commentaire"])){
 
-        $commentaire = htmlspecialchars($_POST["commentaire"]);
+        $commentaire = htmlspecialchars($_POST["commentaire"], ENT_QUOTES);
         $sessionId = ($_SESSION["id"]);
         $date = date('Y/m/d H:i:s');
 
