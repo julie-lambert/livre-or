@@ -70,9 +70,9 @@ if (isset($_POST['delete'])) {
         <div class="form1">
             <form  method = "post" action="profil.php">
             <p>Votre Profil</p>
-                <input type="text" name="login" placeholder="<?php echo $login ?>">
+                <input type="text" name="login" value="<?php echo $login ?>">
                 <br><br>
-                <input type="password" name="password" placeholder="<?php echo $password ?>">
+                <input type="password" name="password" value="<?php echo $password ?>">
                 <br><br>
 
                 <br><br>

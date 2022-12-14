@@ -18,7 +18,7 @@ $users = $query -> fetch_all();
         $user = mysqli_query($conn, $user);
         $session_users = mysqli_fetch_array($user, MYSQLI_ASSOC);
 
-        var_dump($session_users);
+        
         for($i=0; isset($users[$i]); $i++){
             
             
@@ -41,7 +41,7 @@ $users = $query -> fetch_all();
             else{
                 echo"Mauvais login<br>";
             }   
-            
+           
         }
             
      }    
